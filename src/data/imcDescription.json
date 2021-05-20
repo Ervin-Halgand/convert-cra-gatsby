@@ -1,0 +1,40 @@
+[
+    {
+        "image": "../images/underweight.png",
+        "alt": "underweight",
+        "containerColor": "rgb(39, 172, 228)",
+        "title": "Sous-Poids",
+        "desc": "< 18,5"
+    },
+    {
+        "image": "../images/normal.png",
+        "alt": "normal",
+        "containerColor": "rgb(109, 126, 56)",
+        "title": "normal",
+        "desc": "18,5",
+        "desc2": "24,9"
+    },
+    {
+        "image": "../images/overweight.png",
+        "alt": "overweight",
+        "containerColor": "rgb(226, 157, 29)",
+        "title": "Surpoids",
+        "desc": "25,0",
+        "desc2": "29,9"
+    },
+    {
+        "image": "../images/obese.png",
+        "alt": "obese",
+        "containerColor": "rgb(221, 112, 44)",
+        "title": "obésité",
+        "desc": "30,0",
+        "desc2": "34,9"
+    },
+    {
+        "image": "../images/extremely_obese.png",
+        "alt": "très obèsse",
+        "containerColor": "rgb(218, 31, 38)",
+        "title": "obésité sévère",
+        "desc": "> 35"
+    }
+]

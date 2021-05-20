@@ -1,0 +1,213 @@
+.metabolisme {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.metabolisme__sexe, .metabolisme__body {
+    display: flex;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.metabolisme__sexe>button:first-child {
+    margin-right: 5px;
+    transform: translate3d(-100px, 0, 0);
+    opacity: 0;
+    animation: slideRight 1.5s 3s forwards;
+}
+
+.metabolisme__sexe>button:last-child {
+    margin-left: 5px;
+    transform: translate3d(100px, 0, 0);
+    opacity: 0;
+    animation: slideRight 1.5s 3s forwards;
+}
+
+.metabolisme__activity__container, .metabolisme__container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    position: relative;
+}
+
+.metabolisme__activity__container > button {
+    margin-bottom: 10px;
+}
+
+.metabolisme__activity__container__desc {
+    opacity: 0;
+    transition: opacity .2s linear;
+    text-align: center;
+    padding: 10px 25px;
+    background-color: var(--white-alpha-40);
+    border: 1px solid var(--white-alpha-25);
+    border-radius: var(--border-light);
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    animation: allowHover 0s 4.5s forwards;
+}
+
+@keyframes allowHover {
+    to {
+        visibility: visible
+    }
+}
+
+.opacity1 {
+    opacity: 1;
+}
+
+.metabolisme__result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.metabolisme__result__section2 {
+    display: flex;
+}
+
+.metabolisme__activity__container_info {
+    width: 100%;
+    margin-bottom: 10px;
+    max-height: 47px;
+}
+
+.metabolisme__activity__container_info1 {
+    transform: translate3d(-100px, 0, 0);
+    animation: ease-out slideRight 1.5s 3s forwards;
+}
+
+.metabolisme__activity__container_info2 {
+    transform: translate3d(100px, 0, 0);
+    animation: ease-out slideRight 1.5s 3s forwards;
+}
+
+.metabolisme__activity__container_info3 {
+    transform: translate3d(-100px, 0, 0);
+    animation: ease-out slideRight 1.5s 3s forwards;
+}
+
+.metabolisme__result__circle>div:first-child::after {
+    content: 'kc';
+    color: var(--main-color);
+    position: absolute;
+    right: 85px;
+}
+
+.metabolisme__activity__container>.card:nth-child(odd) {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+    animation: ease-out slideRight 1.5s 3s forwards;
+}
+
+.metabolisme__activity__container>.card:nth-child(even) {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+    animation: ease-out slideRight 1.5s 3s forwards;
+}
+
+.metabolisme__result__section2>div:nth-child(1) {
+    opacity: 0;
+    animation: opacityIn .5s forwards;
+}
+
+.metabolisme__result__section2>div:nth-child(2) {
+    opacity: 0;
+    animation: opacityIn .5s forwards;
+}
+
+.metabolisme__result>div:nth-child(1) {
+    opacity: 0;
+    animation: opacityIn .5s forwards;
+}
+
+.metabolisme__result>.metabolisme__result__circle__container>.metabolisme__result__circle, .metabolisme__result__section2>.metabolisme__result__circle__container>.metabolisme__result__circle {
+    transform: scale(1);
+    animation: linear scaleAnimation 1s .5s forwards;
+}
+
+.metabolisme__result>.metabolisme__result__circle__container>.metabolisme__result__circle__container__coloration, .metabolisme__result__section2>.metabolisme__result__circle__container>.metabolisme__result__circle__container__coloration {
+    animation: linear onlyTranslate0 1s 1.6s forwards;
+}
+
+.metabolisme__result>.metabolisme__result__circle__container>.metabolisme__result__circle>div, .metabolisme__result__section2>.metabolisme__result__circle__container>.metabolisme__result__circle>div {
+    opacity: 0;
+    animation: linear onlyOpacity 1s .5s forwards;
+}
+
+@keyframes scaleAnimation {
+    to {
+        transform: scale(.9);
+    }
+}
+
+@keyframes onlyTranslate0 {
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes onlyOpacity {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1500px) {
+    .metabolisme__sexe, .metabolisme__body, .metabolisme__sexe,
+    .metabolisme__body, .metabolisme__container, .metabolisme__activity__container, .metabolisme__container {
+        width: 300px;
+    }
+}
+
+@media (max-height: 800px) {
+    .card {
+        padding: 5px 25px !important;
+    }
+    .metabolisme__activity__container_info {
+        max-height: 37px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .metabolisme {
+        flex-wrap: wrap-reverse;
+        align-content: flex-end;
+    }
+    .metabolisme__container {
+        width: 90%;
+    }
+    .metabolisme__sexe, .metabolisme__body, .metabolisme__activity__container {
+        width: 100%;
+    }
+    .metabolisme__result__circle__container {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    .metabolisme__result {
+        flex-direction: row;
+    }
+    .metabolisme__result__card__title {
+        font-size: 10px !important;
+        ;
+        text-align: center;
+    }
+    .metabolisme__result__circle>div:first-child::after {
+        right: 7px;
+    }
+    .metabolisme__result {
+        padding-bottom: 26px;
+    }
+    .metabolisme__result>div:first-child {
+        margin-left: 0px;
+    }
+}
