@@ -34,6 +34,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    `gatsby-plugin-netlify`,
     { resolve: `gatsby-transformer-json` },
     { resolve: `gatsby-transformer-sharp` },
     { resolve: `gatsby-plugin-sharp` },
