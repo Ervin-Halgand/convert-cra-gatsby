@@ -46,7 +46,7 @@ export const Seo = ({ title, description, slug }) => {
                                 name: `og:type`,
                                 content: "website"
                             },
-                            {
+                            data.imageSharp && {
                                 property: `og:image`,
                                 content: data.imageSharp.fluid.src
                             },

@@ -20,8 +20,6 @@ const FFMI = () => {
         }
       }
       `);
-    console.log(iconBiceps.imageSharp.fluid.src)
-
     const calculateFFMI = () => {
         if (size.length < 3 || weight < 10 || fat === 0)
             return;
