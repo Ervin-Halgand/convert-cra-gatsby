@@ -74,7 +74,7 @@ export const Seo = ({ title, description, slug }) => {
                                 name: `twitter:description`,
                                 content: description || data.allSite.edges[0].node.siteMetadata.description
                             },
-                            {
+                            data.imageSharp && {
                                 property: `twitter:image`,
                                 content: data.imageSharp.fluid.src
                             },
