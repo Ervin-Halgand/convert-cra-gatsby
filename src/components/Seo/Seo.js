@@ -46,9 +46,9 @@ export const Seo = ({ title, description, slug }) => {
                                 name: `og:type`,
                                 content: "website"
                             },
-                            data.imageSharp && {
+                            {
                                 property: `og:image`,
-                                content: data.imageSharp.fluid.src
+                                content: data.allSite.edges[0].node.siteMetadata.image
                             },
                             {
                                 property: `og:url`,
@@ -74,9 +74,9 @@ export const Seo = ({ title, description, slug }) => {
                                 name: `twitter:description`,
                                 content: description || data.allSite.edges[0].node.siteMetadata.description
                             },
-                            data.imageSharp && {
+                            {
                                 property: `twitter:image`,
-                                content: data.imageSharp.fluid.src
+                                content: data.allSite.edges[0].node.siteMetadata.image
                             },
                             {
                                 name: "keyword",
@@ -85,7 +85,7 @@ export const Seo = ({ title, description, slug }) => {
                         ]}
                     >
                         <link rel='canonical' href={`${data.allSite.edges[0].node.siteMetadata.url}${slug}`} />
-                        <link rel='shortcut icon' href={data.imageSharp.fluid.src} />
+                        <link rel='shortcut icon' href={data.allSite.edges[0].node.siteMetadata.image} />
 
                     </Helmet>
                 </div>

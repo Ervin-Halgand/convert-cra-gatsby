@@ -3,7 +3,8 @@ module.exports = {
     title: "Indicateur santer",
     description: "Calculateur d’indice de masse corporelle. Calculateur du Fat Free Mass Index (FFMI, savoir à quelle point on est en forme).Calculateur de métabolisme. Permet de savoir si nous somme ne bonne santé.",
     url: "http://localhost:8080",
-    author: "Ervin Halgand",
+    author: "Ervin H",
+    image: `src/images/favicon.png`
   },
   plugins: [
     /* {
