@@ -5,11 +5,6 @@ export const Seo = ({ title, description, slug }) => {
     return (
         <StaticQuery query={graphql
             `query getSiteMetaData {
-                imageSharp(id: {eq: "afe33f0d-5d1b-5502-903a-207e6a746863"}) {
-                    fluid {
-                      src
-                    }
-                  }
                 allSite {
                   edges {
                     node {
@@ -28,6 +23,9 @@ export const Seo = ({ title, description, slug }) => {
                 const metaKeywords = ["imc", "ffmi", "metabolisme", "santé", "muscle", "calculateur"];
                 return <div className="application">
                     <Helmet
+                        htmlAttributes={{
+                            lang: 'fr',
+                        }}
                         title={title || data.allSite.edges[0].node.siteMetadata.title}
                         meta={[
                             {

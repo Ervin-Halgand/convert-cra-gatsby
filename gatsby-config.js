@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Indicateur santer",
     description: "Calculateur d’indice de masse corporelle. Calculateur du Fat Free Mass Index (FFMI, savoir à quelle point on est en forme).Calculateur de métabolisme. Permet de savoir si nous somme ne bonne santé.",
-    url: "http://localhost:8080",
+    url: "https://keen-chandrasekhar-cdaf16.netlify.app",
     author: "Ervin H",
     image: `src/images/favicon.png`
   },
@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "G-KGX4KK9BKF",
+        trackingId: "273206763",
       },
     },
     {
@@ -22,7 +22,6 @@ module.exports = {
         background_color: `#aef1ee`,
         theme_color: `#efa2b4`,
         display: `standalone`,
-        lang: `fr`,
         icon: `src/images/favicon-512x512.png`,
         icons: [
           {
