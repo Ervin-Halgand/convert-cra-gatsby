@@ -97,8 +97,9 @@ const Imc = () => {
                             </div>
                             <div className="imc__img">
                                 {data.allImcDescriptionJson.edges.map((card, i) => {
-                                    return <ImcCard key={i} image={card.node.image.childImageSharp.fluid.src} alt={card.node.alt} sizes= {card.node.image.childImageSharp.fluid.sizes}
-                                        containerColor={card.node.containerColor} title={card.node.title} desc={card.node.desc} desc2={card.node?.desc2} active={activeCard === i} />
+                                    if (card.node.image.childImageSharp)
+                                        return <ImcCard key={i} image={card.node.image.childImageSharp.fluid.src} alt={card.node.alt} sizes={card.node.image.childImageSharp.fluid.sizes}
+                                            containerColor={card.node.containerColor} title={card.node.title} desc={card.node.desc} desc2={card.node?.desc2} active={activeCard === i} />
                                 })}
                             </div>
                         </div>

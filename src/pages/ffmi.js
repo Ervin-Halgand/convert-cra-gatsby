@@ -41,7 +41,7 @@ const FFMI = () => {
     }, [size, weight, fat])
     return (
         <main className="app">
-            <Seo title="FFMI" slug="/ffmi"/>
+            <Seo title="FFMI" slug="/ffmi" />
             <div className="main__container__page">
                 <div className="navigation__title">
                     <div className="imc__navigate__back">
@@ -68,7 +68,7 @@ const FFMI = () => {
                     <div ref={barRef} className="bar__main__container">
                         <div className="bar__container__indicator__container">
                             <span style={ffmi > 0 ? { opacity: 1 } : { opacity: 0 }}> {ffmi}</span>
-                            <img src={iconBiceps.imageSharp.fluid.src} className="bar__container__indicator" alt="indicator" />
+                            {iconBiceps.imageSharp && <img src={iconBiceps.imageSharp.fluid.src} className="bar__container__indicator" alt="indicator" />}
                         </div>
                         <div className="bar__container">
                             {(() => {
