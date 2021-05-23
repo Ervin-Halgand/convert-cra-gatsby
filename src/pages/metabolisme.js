@@ -45,7 +45,7 @@ const Metabolisme = () => {
             mb = metabolismeMenCalculation(weight, size, age);
         else
             mb = metabolismeWomanCalculation(weight, size, age);
-        const physicalActivity = mb * activities.find(value => value.text === activity).value - mb;
+        const physicalActivity = mb * activities.allActivitiesJson.edges.find(value => value.node.text === activity).node.value - mb;
         updateCounter(refs.metabolismeBase, parseInt(mb.toFixed(0)));
         updateCounter(refs.metabolismeTotal, parseInt((mb + physicalActivity).toFixed(0)));
         updateCounter(refs.physicalActivity, physicalActivity);
@@ -81,8 +81,8 @@ const Metabolisme = () => {
                             <input onChange={(e) => { setAge(e.target.value); }} placeholder="Age" className="imc__input" type="number" min="10" />
                         </div>
                         <div className="metabolisme__activity__container">
-                            {activities.allActivitiesJson.edges.map((activity, i) => <SelectCard key={i} onMouseLeave={setActivityDescIsHover} onMouseEnter={setActivityDesc}
-                                desc={activity.node.desc} title={activity.node.text} callBack={setActivity} isActive={activity === activity.node.text} />)}
+                            {activities.allActivitiesJson.edges.map((acti, i) => <SelectCard key={i} onMouseLeave={setActivityDescIsHover} onMouseEnter={setActivityDesc}
+                                desc={acti.node.desc} title={acti.node.text} callBack={setActivity} isActive={activity === acti.node.text} />)}
                             <div className={`metabolisme__activity__container__desc ${activityDescIsHover && "opacity1"}`}>
                                 {activityDesc}
                             </div>
