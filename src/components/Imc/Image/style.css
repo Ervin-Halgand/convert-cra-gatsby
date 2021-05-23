@@ -6,6 +6,7 @@
 }
 
 .main__container {
+    min-height: 430px;
     opacity: 0;
     height: 90%;
     background-color: var(--white-alpha-40);
@@ -110,6 +111,7 @@
         flex-wrap: wrap;
     }
     .main__container {
+        min-height: inherit;
         margin-top: 10px;
         height: inherit;
         width: 146px;
