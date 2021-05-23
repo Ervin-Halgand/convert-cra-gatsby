@@ -6,6 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Seo } from '../components/Seo/Seo'
 
+
 const FFMI = () => {
     const barRef = useRef(null);
     const [size, setSize] = useState(0);
@@ -13,11 +14,13 @@ const FFMI = () => {
     const [fat, setFat] = useState(0);
     const [ffmi, setFfmi] = useState(0);
     const iconBiceps = useStaticQuery(graphql`query queryIconBiceps {
-        imageSharp(id: {eq: "ce4265d6-6f09-5ebf-a1b3-83e0cc5f281f"}) {
-          fluid {
-            src
+        allFile(filter: {relativePath: {eq: "icon-biceps.png"}}) {
+            edges {
+              node {
+                publicURL
+              }
+            }
           }
-        }
       }
       `);
     const calculateFFMI = () => {
@@ -68,7 +71,7 @@ const FFMI = () => {
                     <div ref={barRef} className="bar__main__container">
                         <div className="bar__container__indicator__container">
                             <span style={ffmi > 0 ? { opacity: 1 } : { opacity: 0 }}> {ffmi}</span>
-                            {iconBiceps.imageSharp && <img src={iconBiceps.imageSharp.fluid.src} className="bar__container__indicator" alt="indicator" />}
+                            <img src={iconBiceps.allFile.edges[0].node.publicURL} className="bar__container__indicator" alt="indicator" />
                         </div>
                         <div className="bar__container">
                             {(() => {

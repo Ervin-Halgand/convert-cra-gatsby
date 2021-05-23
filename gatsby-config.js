@@ -109,9 +109,10 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     `gatsby-plugin-netlify`,
-    { resolve: `gatsby-transformer-json` },
-    { resolve: `gatsby-transformer-sharp` },
-    { resolve: `gatsby-plugin-sharp` },
+    `gatsby-transformer-json`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
