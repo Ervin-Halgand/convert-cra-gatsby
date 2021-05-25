@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Indicateur santer (IMC, FFMI, Metabolisme)`,
-        short_name: `Indicateur santer`,
+        name: `Indicateur santé (IMC, FFMI, Metabolisme)`,
+        short_name: `Indicateur santé`,
         start_url: `/`,
         background_color: `#aef1ee`,
         theme_color: `#efa2b4`,
