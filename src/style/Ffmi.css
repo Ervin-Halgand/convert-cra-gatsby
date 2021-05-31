@@ -231,14 +231,33 @@
 }
 
 @media (max-width: 600px) {
+    .bar__main__container  {
+        width: 97%;
+    }
     .ffmi__input__container {
         width: 90%;
     }
     .bar__item::before {
-        content: '' !important;
+        font-size: 14px;
+        content: '';
     }
-    .bar__item:nth-child(even) {
+
+    .bar__item:nth-child(2) {
         display: none;
+    }
+    .bar__item:nth-child(even)>span {
+        visibility: hidden;
+    }
+    .bar__item:first-child, .bar__item:last-child {
+        display: none;
+    }
+    .bar__item:nth-child(14) {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .bar__item:nth-child(3) {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
     }
 }
 

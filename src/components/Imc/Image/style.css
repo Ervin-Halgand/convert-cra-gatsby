@@ -145,6 +145,9 @@
     .imc {
         padding-bottom: 20px;
     }
+    .img__container__img {
+        width: 50%;
+    }
 }
 
 @media (max-width: 500px) {
