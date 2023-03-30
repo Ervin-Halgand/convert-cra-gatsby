@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: "Indicateur santé",
-    description: "Calculateur d’indice de masse corporelle. Calculateur du Fat Free Mass Index (FFMI, savoir à quelle point on est en forme).Calculateur de métabolisme. Permet de savoir si nous somme ne bonne santé.",
-    url: "http://indicateur-sante.fr",
-    author: "Ervin H",
-    image: `src/images/favicon.png`
+    description: "Notre site internet est un outil de calcul en ligne qui vous permet de déterminer votre FFMI, votre IMC et votre métabolisme de base en quelques secondes. Utilisez notre calculateur pour mieux comprendre votre corps et atteindre vos objectifs de santé et de bien-être. Nous vous aidons à évaluer votre masse musculaire, votre poids santé et vos besoins caloriques. Obtenez des résultats précis et fiables pour mieux prendre soin de votre corps.",
+    url: "https://indicateur-sante.netlify.app/",
+    author: "Ervin Halgand",
+    image: `src/images/favicon.png`,
+    keywords: ["ffmi", "imc", "métabolisme de base", "santé", "bien-être", "perte de poids", "prise de masse musculaire", "calculateur en ligne", "outil de santé"]
   },
   plugins: [
     {

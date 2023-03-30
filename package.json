@@ -1,11 +1,18 @@
 {
-  "name": "my-gatsby-site",
+  "name": "indicateur-sante",
   "version": "1.0.0",
-  "private": true,
-  "description": "My Gatsby Site",
+  "description": "Calculateur en ligne de FFMI, IMC et métabolisme de base pour une meilleure santé et bien-être. Utilisez notre outil de calcul pour évaluer votre masse musculaire, votre poids santé et vos besoins caloriques. Obtenez des résultats précis et fiables en quelques secondes.",
   "author": "Halgand Ervin",
   "keywords": [
-    "gatsby"
+    "ffmi",
+    "imc",
+    "métabolisme de base",
+    "santé",
+    "bien-être",
+    "perte de poids",
+    "prise de masse musculaire",
+    "calculateur en ligne",
+    "outil de santé"
   ],
   "scripts": {
     "develop": "gatsby develop",
