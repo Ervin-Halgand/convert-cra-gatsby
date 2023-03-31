@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Indicateur santé",
     description: "Notre site internet est un outil de calcul en ligne qui vous permet de déterminer votre FFMI, votre IMC et votre métabolisme de base en quelques secondes. Utilisez notre calculateur pour mieux comprendre votre corps et atteindre vos objectifs de santé et de bien-être. Nous vous aidons à évaluer votre masse musculaire, votre poids santé et vos besoins caloriques. Obtenez des résultats précis et fiables pour mieux prendre soin de votre corps.",
-    url: "https://indicateur-sante.netlify.app/",
+    url: "https://indicateur-sante.netlify.app",
     author: "Ervin Halgand",
     image: `src/images/favicon.png`,
     keywords: ["ffmi", "imc", "métabolisme de base", "santé", "bien-être", "perte de poids", "prise de masse musculaire", "calculateur en ligne", "outil de santé"]
